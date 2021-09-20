@@ -9,6 +9,13 @@ def blueraySize(m):
   blueray = 0
   cnt = 1
   for time in times:
+    # blueray += time
+    # if blueray > m:
+    #   blueray = time
+    #   cnt += 1
+    #   if cnt > M:
+    #     return False
+    
     if blueray + time > m:
       cnt += 1
       blueray = 0
