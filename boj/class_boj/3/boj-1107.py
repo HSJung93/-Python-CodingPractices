@@ -18,3 +18,5 @@ for channel in range(1000000):
       min_cnt = min(min_cnt, abs(channel - N) + len(str(channel)))
       
 print(min_cnt)
+    
+    
