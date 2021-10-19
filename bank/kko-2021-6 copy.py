@@ -2,9 +2,9 @@ from itertools import combinations
 from collections import deque
 import math, heapq
 
-def do(type, r1, c1, r2, c2, degree):
+def do(typ, r1, c1, r2, c2, degree):
     # 높힌다
-    if type == 1:
+    if typ == 1:
         for i in range(r1, r2+1):
             for j in range(c1, c2+1):
                 board[i][j] -= degree
@@ -16,8 +16,8 @@ def do(type, r1, c1, r2, c2, degree):
 
 def solution(board, skill):
     
-    for type, r1, c1, r2, c2, degree in skill:
-        do(type, r1, c1, r2, c2, degree)
+    for typ, r1, c1, r2, c2, degree in skill:
+        do(typ, r1, c1, r2, c2, degree)
         
     cnt = 0
       
