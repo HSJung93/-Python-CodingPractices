@@ -1,6 +1,9 @@
 import copy
 from collections import deque
 
+moves = [(-1, 0),(1, 0),(0, -1),(0, 1)]
+SIX = 6
+
 def drop(where, color, graph):
     
     new = copy.deepcopy(graph)
@@ -31,7 +34,6 @@ def howmany(i, j, x, graph):
                 
                 
     return sum(map(sum, visited))
-        
 
 def findPop(graph):
     for i in range(SIX):
@@ -43,9 +45,6 @@ def findPop(graph):
                     return [i, j]
             
     return [-1, -1]
-
-moves = [(-1, 0),(1, 0),(0, -1),(0, 1)]
-SIX = 6
 
 def doPop(graph, a, b):
     new = copy.deepcopy(graph)
@@ -65,11 +64,6 @@ def doPop(graph, a, b):
                 q.append((nx, ny))
                 
     new[a][b] = 0
-              
-    # print("new!")  
-    # for n in new:
-    #   print(n)
-    # print()
                 
     for i in range(SIX):
         temp = []
@@ -114,7 +108,3 @@ def solution(macaron):
     return answer
   
 print(solution([[1,1],[2,1],[1,2],[3,3],[6,4],[3,1],[3,3],[3,3],[3,4],[2,1]]))
-
-
-for x in range(3,4):
-  print(x)
