@@ -38,7 +38,7 @@ def solution(leave, day, holidays):
     return mx
 
 
-print(solution(30, "FRI", []))
+print(solution(4, "FRI", [3, 13, 15, 17]))
 
 
 """
