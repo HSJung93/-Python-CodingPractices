@@ -8,7 +8,7 @@ result = [0] * 3
 # value -1 0 1
 
 for _ in range(N): 
-    matrix.append(list(map(int, sys.stdin.readline().split()))) 
+  matrix.append(list(map(int, sys.stdin.readline().split()))) 
     
 def check(start_x, start_y, n): 
   temp = matrix[start_x][start_y] 
@@ -22,6 +22,9 @@ def check(start_x, start_y, n):
 def divide(start_x, start_y, n): 
   if check(start_x, start_y, n): 
     # 외부 변수를 업데이트하는 동작으로 구현하는 것이 편한 경우가 많다.
+    # 1 -> 2번째 값을
+    # 0 -> 1번째 값을
+    # -1 -> 0번째 값을
     result[matrix[start_x][start_y] + 1] += 1 
   else: 
     for i in range(3): 
@@ -35,3 +38,21 @@ divide(0, 0, N)
 
 for i in range(3): 
   print(result[i])
+
+
+"""
+9
+0 0 0 1 1 1 -1 -1 -1
+0 0 0 1 1 1 -1 -1 -1
+0 0 0 1 1 1 -1 -1 -1
+1 1 1 0 0 0 0 0 0
+1 1 1 0 0 0 0 0 0
+1 1 1 0 0 0 0 0 0
+0 1 -1 0 1 -1 0 1 -1
+0 -1 1 0 1 -1 0 1 -1
+0 1 -1 1 0 -1 0 1 -1
+
+10
+12
+11
+"""

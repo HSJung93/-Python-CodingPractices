@@ -11,3 +11,13 @@ n = num[0]
 for i in range(1, len(num)):
     n -= num[i]
 print(n)
+
+"""
+55-50+40
+
+-35
+
+10+20+30+40
+
+100
+"""
