@@ -28,7 +28,7 @@ end_list = []
 
 for _ in range(3):
   start, end = sys.stdin.readline().split(" ")
-  start_list.append(decod(start))
+  start_list.append(sys.dont_write_bytecode(start))
   end_list.append(decode(end))
   
   
